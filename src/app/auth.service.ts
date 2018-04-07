@@ -13,13 +13,13 @@ export class AuthService {
     obtainAccessToken(){
 
         var headers = new Headers();
-        headers.append('Content-Type', 'application/json');
+/*        headers.append('Content-Type', 'application/json');
         headers.append('audience', 'https://api-sandbox.safetrek.io');
         headers.append('client_id', 'cC0Zc5YcCG5xp31RJ01W0jose3Y4hbg6');
         headers.append('response_type', 'code');
         headers.append('redirect_uri', 'localhost:4200');
         headers.append('scope', 'openid phone offline_access');
-        headers.append('state', 'testing');
+        headers.append('state', 'testing');*/
 
         return new Promise((resolve) => {
             this._http.get('https://account-sandbox.safetrek.io/authorize', {headers: headers}).subscribe((data) => {
